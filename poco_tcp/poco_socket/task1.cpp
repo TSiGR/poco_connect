@@ -32,8 +32,8 @@ std::string Task::solution_2(Poco::Net::StreamSocket& str_sock)
     std::vector<int> checks;
     std::vector<int> res;
 
-    std::ifstream look("..\\..\\..\\sol_2\\simple.txt");
-    std::ifstream check("..\\..\\..\\sol_2\\happy.txt");
+    std::ifstream look("../../../sol_2/simple.txt");
+    std::ifstream check("../../../sol_2/happy.txt");
 
     if (!look.is_open() || !check.is_open())
     {

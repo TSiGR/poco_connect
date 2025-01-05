@@ -58,7 +58,7 @@ void Client::getfiles()
         std::string filename;
         std::cout << "Input filename: ";
         std::cin >> filename;
-        std::ofstream filestream("..\\..\\" + filename);
+        std::ofstream filestream("../../" + filename);
         filestream.write(buff, sizeof(buff));
         filestream.close();
         memset(buff, '\0', sizeof(buff));
