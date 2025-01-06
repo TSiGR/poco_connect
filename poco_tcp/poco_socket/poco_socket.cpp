@@ -32,7 +32,6 @@
     void newConnect::run()
     {
         
-
         try
         {
             std::cout << "Created connection " << str_sock.peerAddress().host().toString() << "\n";
