@@ -14,8 +14,9 @@ To try this project you need to install [CMake](https://cmake.org/download/) and
 You can use this project on Windows and UNIX/Linux systems.
 
 The standart building process includes the next commands:
-
+````
 $ mkdir build
 $ cd build
 $ cmake ..
 $ cmake --build . --config Release
+````
