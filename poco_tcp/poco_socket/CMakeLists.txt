@@ -6,8 +6,9 @@ set(TCP_RESOURCES ${PROJECT_SOURCE_DIR}/resources)
 
 add_executable(poco_socket ${TCP_SOURCES})
 
-file(COPY ${TCP_RESOURCES}
-     DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+add_custom_command(TARGET poco_socket POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+    ${TCP_RESOURCES} $<TARGET_FILE_DIR:poco_socket>/resources)
 
 target_link_libraries(poco_socket PRIVATE Poco::Foundation Poco::Net)
 
